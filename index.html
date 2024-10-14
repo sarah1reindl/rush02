@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah's Website</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header> 
+    <div class="header">
+    </div>
+
+    <nav class="navbar">
+       
+        <a href="#"><img src="MYLOGO.png" alt="MYLOGO" class="MYLOGO"></a>
+        <a href="#"><img src="menu.png" alt="menu" class="menu"></a>
+        <div class="search-bar">
+            <a href="#"><img src="loop.png" alt="loop" class="loop"></a>
+            <input type="search" class="search-input" placeholder="Search" required>
+            <button type="submit" class="search-button">
+                <i class="fas fa-search"></i>
+                <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+
+            </button>
+           
+        </div>
+
+        <ul class="nav-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Magazine</a></li>
+        </ul>
+        
+
+        <div class="icons">
+            <div class="login-icon">
+                <a href="#"><img src="shoppincart.png" alt="Shopping Cart" class="cart-img"></a>
+            </div>
+
+            <div class="text">
+                <a href="#"><i class="fas fa-user"></i> Login</a>
+            </div>
+           
+           
+            
+            
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="sidebar">
+
+        <div class="best-match">
+            <select id="sort" name="sort">
+                <option value="best-match">Best Match </option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+                <option value="newest">Newest Arrivals</option>
+            </select>
+        </div>
+        
+
+
+
+        <button class="filter-toggle" onclick="toggleFilter()">Filter By</button> 
+        
+        <div class="filter-content" id="filterContent">
+            <h3>Filters</h3>
+            <div class="filter-category">
+                <h4>Category</h4>
+                <label><input type="checkbox" name="category" value="clothing"> Beds</label>
+                <label><input type="checkbox" name="category" value="accessories"> Chairs</label>
+                <label><input type="checkbox" name="category" value="footwear"> Sofas</label>
+            </div>
+            <div class="filter-color">
+                <h4>Color</h4>
+                <label><input type="checkbox" name="color" value="red"> dark</label>
+                <label><input type="checkbox" name="color" value="blue"> light</label>
+            </div>
+            <div class="filter-collection">
+                <h4>Collection</h4>
+                <label><input type="checkbox" name="collection" value="summer"> bubble</label>
+                <label><input type="checkbox" name="collection" value="winter"> bamboo</label>
+            </div>
+            <div class="filter-price">
+                <h4>Price Range</h4>
+                <input type="range" min="500" max="10000" value="50" class="price-range" id="priceRange">
+                <p>Price: <span id="priceValue">50</span></p>
+            </div>
+            <button class="apply-filters">Apply Filters</button>
+        </div>
+    </div>
+
+    <section class="product-list">
+        <div class="product-item">
+            <img src="chaise1.png" alt="Product 1">
+            <h4>$2500.00</h4>
+            <p>Astrea lounge</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="chaise2.png" alt="Product 2">
+            <h4>$3480.00</h4>
+            <p>Astrea</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="chaise3.png" alt="Product 3">
+            <h4>$2981.00</h4>
+            <p>Astrea</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="chaise4.png" alt="Product 4">
+            <h4>$2478.00</h4>
+            <p>Bubble</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="chaise5.png" alt="Product 5">
+            <h4>$4000.00</h4>
+            <p>Bubble mini</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="chaise6.png" alt="Product 6">
+            <h4>$4589.00</h4>
+            <p>Bubble</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </section>
+</main>
+
+<script>
+    function toggleFilter() {
+        const filterContent = document.getElementById("filterContent");
+        filterContent.style.display = filterContent.style.display === "none" || filterContent.style.display === "" ? "block" : "none";
+    }
+
+    const priceRange = document.getElementById("priceRange");
+    const priceValue = document.getElementById("priceValue");
+    priceRange.oninput = function() {
+        priceValue.innerText = this.value;
+    }
+</script>
+     <footer>
+            <div class="btn">
+                <button>1</button>   
+                <button>2</button>    
+                <button>3</button>    
+                <button>4</button>   
+                <button>5</button>   
+                <button>6</button>
+                <button>></button> 
+            </div>
+        </footer>
+        
+  
+
+</body>
+</html>
